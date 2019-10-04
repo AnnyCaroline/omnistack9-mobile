@@ -10,8 +10,6 @@ export default function Book({ navigation }) {
     async function handleSubmit() {
         const user_id = await AsyncStorage.getItem('user');
 
-        console.log(date);
-
         await api.post(`/spots/${id}/bookings`, {
             data: date
         }, {
